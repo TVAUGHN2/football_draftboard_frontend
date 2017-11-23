@@ -1,0 +1,5 @@
+/* Wrap individual drafter tables when screen size adjusts */
+.ff-drafter-table{
+    display: inline-block;
+    margin: 5px; 
+}

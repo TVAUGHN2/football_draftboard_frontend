@@ -1,0 +1,38 @@
+
+<div class="ff-teal ff-drafter-container"> 
+    <i class="fa fa-user fa-fw ff-text-white ff-large "></i>
+    {{ drafter.name }}
+<table table-layout: fixed class="ff-position-count">
+    <tr class="ff-pale-turqoise">
+      <th class="ff-position-right-border">QB</th>
+      <th class="ff-position-right-border">RB</th>
+      <th class="ff-position-right-border">WR</th>
+      <th class="ff-position-right-border">TE</th>
+    </tr>
+    <tr class="ff-light-gray">
+      <th class="ff-position-right-border">{{ drafter.getPositionCount("QB") }}</th>
+      <th class="ff-position-right-border">{{ drafter.getPositionCount("RB") }}</th>
+      <th class="ff-position-right-border">{{ drafter.getPositionCount("WR") }}</th>
+      <th class="ff-position-right-border">{{ drafter.getPositionCount("TE") }}</th>
+    </tr> 
+</table>
+
+<div class=" ff-striped ff-white ff-centered">
+  <table>
+    <tr class="ff-blue-gray">
+      <th>Round</th>
+      <th>Name</th>
+      <th>Position</th>
+      <th>Team</th>
+      <th>Bye Week</th>
+    </tr>
+    <tr *ngFor="let pick of drafter.picks">
+      <td>{{ pick.pickNum}}</td>
+      <td>{{ pick.player.firstName }} {{ pick.player.lastName }} </td>
+      <td><i>{{ pick.player.position }}</i></td>
+      <td><i>{{ pick.player.teamAbbr }}</i></td>
+      <td><i>{{ pick.player.bye }}</i></td>
+    </tr>
+  </table>
+</div>
+</div>

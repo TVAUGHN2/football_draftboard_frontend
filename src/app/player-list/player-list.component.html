@@ -1,0 +1,28 @@
+
+<!-- Sidebar/menu -->
+
+  
+  <div class="ff-player-container" *ngIf="rankings"  >
+      <table class="ff-player-table">
+          <tr class="ff-player-header ff-blue-gray">
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Team</th>
+            <th>Bye</th>
+          </tr>
+          <tr *ngFor= "let ranking of rankings" class="ff-player-row ff-white" 
+          dnd-draggable [dragEnabled]="true" dragData="{{ranking | json}}">
+              <td>{{ ranking.rank }}</td>
+              <td>{{ ranking.firstName }} {{ ranking.lastName }}</td>
+              <td><i>{{ ranking.position }}</i></td>
+              <td><i>{{ ranking.teamAbbr }}</i></td>
+              <td><i>{{ ranking.bye }}</i></td>
+          </tr>
+        </table>
+  </div>
+
+    
+  
+   
+   

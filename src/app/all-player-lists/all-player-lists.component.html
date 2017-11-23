@@ -1,0 +1,73 @@
+
+
+
+<div class="container" *ngIf="ranking">
+<!--select button and container for player lists-->
+<div class="ff-teal ff-container" dnd-droppable (onDropSuccess)="transferBackDataSuccess($event)">
+  <div class="container dropdown">
+    
+  
+    <div id="myDropdown" class="dropdown-content">
+      <a (click)="getRanking('OVERALL')">Overall</a>
+      <a (click)="getRanking('QB')">QB</a>
+      <a (click)="getRanking('RB')">RB</a>
+      <a (click)="getRanking('WR')">WR</a>
+      <a (click)="getRanking('TE')">TE</a>
+      <a (click)="getRanking('DEF')">DEF</a>
+      <a (click)="getRanking('K')">K</a>
+    </div>
+    <div>
+        <i class="fa fa-users fa-fw"></i>
+        {{ ranking.type }} Player List 
+    </div> 
+
+     <button (click)="displayOptions()" class="dropbtn">Select Rankings</button>
+    </div>
+
+    <div class="list" >
+      <app-player-list [rankings]="ranking.ranking"></app-player-list>
+    </div>
+</div>
+
+
+<!--Selected Players list-->
+<div class="ff-selected" dnd-droppable (onDropSuccess)="transferDataSuccess($event)">
+    <div>Drafted Players</div>
+    <div class="panel-heading">Drop Players Here (Players Drafted: {{selectedPlayers.length}})</div>
+    <!--<div> {{receivedData[0] | json}}</div>-->
+
+    <table class="ff-selected-table">
+        <tr class="ff-blue-gray ff-selected-row">
+        <th>Taken</th>
+        <th>Name</th>
+        <th>Position</th>
+        <th>Team</th>
+        <th>Bye</th>
+        </tr>
+        <tr *ngFor= "let player of selectedPlayers" class="ff-selected-row" 
+            dnd-draggable [dragEnabled]="true" dragData="{{player | json}}">
+            <td>{{ player.taken }}</td>
+            <td>{{ player.firstName }} {{ player.lastName }}</td>
+            <td><i>{{ player.position }}</i></td>
+            <td><i>{{ player.teamAbbr }}</i></td>
+            <td><i>{{ player.bye }}</i></td>
+        </tr>
+    </table>
+</div>
+
+<!--Drop Boxes-->
+<div class="dnd-container" dnd-droppable (onDropSuccess)="transferBackDataSuccess($event)">
+    <div class="dnd-box" >
+        Drop Players To <b>Remove</b> From Drafted Listed
+    </div>
+</div>
+
+</div>
+
+
+
+<!--
+<div class="container" *ngFor="let ranking of rankings">
+    <app-player-list [rankings]="ranking.ranking" [type]="ranking.type"></app-player-list>
+</div>
+-->

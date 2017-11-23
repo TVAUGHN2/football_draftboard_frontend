@@ -1,0 +1,199 @@
+/* Colors */
+.ff-amber,.ff-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
+.ff-aqua,.ff-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
+.ff-blue,.ff-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
+.ff-light-blue,.ff-hover-light-blue:hover{color:#000!important;background-color:#87CEEB!important}
+.ff-brown,.ff-hover-brown:hover{color:#fff!important;background-color:#795548!important}
+.ff-cyan,.ff-hover-cyan:hover{color:#000!important;background-color:#00bcd4!important}
+.ff-blue-soft,.ff-blue-soft-hover:hover{color:#fff!important;background-color:#6ca5ea!important}
+.ff-blue-grey,.ff-hover-blue-grey:hover,.ff-blue-gray,.ff-hover-blue-gray:hover{color:#fff!important;background-color:#607d8b!important}
+.ff-green,.ff-hover-green:hover{color:#fff!important;background-color:#4CAF50!important}
+.ff-light-green,.ff-hover-light-green:hover{color:#000!important;background-color:#8bc34a!important}
+.ff-indigo,.ff-hover-indigo:hover{color:#fff!important;background-color:#3f51b5!important}
+.ff-khaki,.ff-hover-khaki:hover{color:#000!important;background-color:#f0e68c!important}
+.ff-lime,.ff-hover-lime:hover{color:#000!important;background-color:#cddc39!important}
+.ff-orange-cream, .ff-hoder-orange-cream:hover{color:#616161!important;background-color:#FFD9A2!important}
+.ff-orange,.ff-hover-orange:hover{color:#000!important;background-color:#ff9800!important}
+.ff-deep-orange,.ff-hover-deep-orange:hover{color:#fff!important;background-color:#ff5722!important}
+.ff-pink,.ff-hover-pink:hover{color:#fff!important;background-color:#e91e63!important}
+.ff-purple-cream, .ff-hover-purple-cream:hover{color:#fff!important;background-color:#b16cea!important}
+.ff-purple,.ff-hover-purple:hover{color:#fff!important;background-color:#9c27b0!important}
+.ff-deep-purple,.ff-hover-deep-purple:hover{color:#fff!important;background-color:#673ab7!important}
+.ff-red,.ff-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+.ff-sand,.ff-hover-sand:hover{color:#000!important;background-color:#fdf5e6!important}
+.ff-teal,.ff-hover-teal:hover{color:#fff!important; font-weight: bold!important; background-color:#009688!important}
+.ff-pale-turqoise, .ff-hover-pale-turqoise:hover{color:#000!important; font-weight: bold!important; background-color:#AFEEEE!important}
+.ff-yellow,.ff-hover-yellow:hover{color:#000!important;background-color:#ffeb3b!important}
+.ff-white,.ff-hover-white:hover{color:#000!important;background-color:#fff!important}
+.ff-black,.ff-hover-black:hover{color:#fff!important;background-color:#000!important}
+.ff-grey-cream,.ff-gray-cream,.ff-grey-cream-hover:hover,.ff-gray-cream-hover:hover{color:#343c3e!important;background-color:#ababab!important}
+.ff-grey,.ff-hover-grey:hover,.ff-gray,.ff-hover-gray:hover{color:#000!important;background-color:#bbb!important}
+.ff-light-grey,.ff-hover-light-grey:hover,.ff-light-gray,.ff-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.ff-dark-grey,.ff-hover-dark-grey:hover,.ff-dark-gray,.ff-hover-dark-gray:hover{color:#fff!important;background-color:#616161!important}
+.ff-pale-red,.ff-hover-pale-red:hover{color:#000!important;background-color:#ffdddd!important}
+.ff-pale-green,.ff-hover-pale-green:hover{color:#000!important;background-color:#ddffdd!important}
+.ff-pale-yellow,.ff-hover-pale-yellow:hover{color:#000!important;background-color:#ffffcc!important}
+.ff-pale-blue,.ff-hover-pale-blue:hover{color:#000!important;background-color:#ddffff!important}
+.ff-neutral-gray {color: #ddffff!important;background-color:#578CA9!important}
+
+.ff-text-red,.ff-hover-text-red:hover{color:#f44336!important}
+.ff-text-green,.ff-hover-text-green:hover{color:#4CAF50!important}
+.ff-text-blue,.ff-hover-text-blue:hover{color:#2196F3!important}
+.ff-text-yellow,.ff-hover-text-yellow:hover{color:#ffeb3b!important}
+.ff-text-white,.ff-hover-text-white:hover{color:#fff!important}
+.ff-text-black,.ff-hover-text-black:hover{color:#000!important}
+.ff-text-grey,.ff-hover-text-grey:hover,.ff-text-gray,.ff-hover-text-gray:hover{color:#757575!important}
+.ff-text-amber{color:#ffc107!important}
+.ff-text-aqua{color:#00ffff!important}
+.ff-text-light-blue{color:#87CEEB!important}
+.ff-text-brown{color:#795548!important}
+.ff-text-cyan{color:#00bcd4!important}
+.ff-text-blue-grey,.ff-text-blue-gray{color:#607d8b!important}
+.ff-text-light-green{color:#8bc34a!important}
+.ff-text-indigo{color:#3f51b5!important}
+.ff-text-khaki{color:#b4aa50!important}
+.ff-text-lime{color:#cddc39!important}
+.ff-text-orange{color:#ff9800!important}
+.ff-text-deep-orange{color:#ff5722!important}
+.ff-text-pink{color:#e91e63!important}
+.ff-text-purple{color:#9c27b0!important}
+.ff-text-deep-purple{color:#673ab7!important}
+.ff-text-sand{color:#fdf5e6!important}
+.ff-text-teal{color:#009688!important}
+.ff-text-pale-turqoise{color:#AFEEEE!important}
+
+.ff-text-light-grey,.ff-hover-text-light-grey:hover,.ff-text-light-gray,.ff-hover-text-light-gray:hover{color:#f1f1f1!important}
+.ff-text-dark-grey,.ff-hover-text-dark-grey:hover,.ff-text-dark-gray,.ff-hover-text-dark-gray:hover{color:#3a3a3a!important}
+.ff-border-red,.ff-hover-border-red:hover{border-color:#f44336!important}
+.ff-border-green,.ff-hover-border-green:hover{border-color:#4CAF50!important}
+.ff-border-blue,.ff-hover-border-blue:hover{border-color:#2196F3!important}
+.ff-border-yellow,.ff-hover-border-yellow:hover{border-color:#ffeb3b!important}
+.ff-border-white,.ff-hover-border-white:hover{border-color:#fff!important}
+.ff-border-black,.ff-hover-border-black:hover{border-color:#000!important}
+.ff-border-grey,.ff-hover-border-grey:hover,.ff-border-gray,.ff-hover-border-gray:hover{border-color:#bbb!important}
+
+
+
+.ff-left{float:left!important}
+.ff-right{float:right!important}
+
+.ff-xlarge{font-size:24px!important}
+
+.ff-margin-bottom{margin-bottom:8px!important}
+
+.ff-feature-container{
+    position: relative;
+    width: 100px;
+}
+
+.ff-feature-block{
+    min-height: 50px;
+    text-align: center;
+}
+
+
+.ff-new-container {
+    position: relative;
+}
+
+.ff-fixed{
+    position: fixed
+}
+
+.ff-player-margin{
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.ff-player-header{
+    font-size: 12px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #FFD9A2;
+    align-content: center;
+    text-align: center;
+}
+
+
+.ff-player-list{
+    width: 100%;
+    border-style: solid;
+    border-width: thin;
+    border-color: #fff;
+}
+.ff-player-list-field{
+    font-size: 12px;
+    width: 25%;
+    text-align: center;
+}
+
+.ff-player-list-selection{
+    font-size: 12px;
+    width: 75%;
+    border-left-style:solid;
+    border-left-width:thin;
+    border-left-color:#fff;
+    align-content: right;
+    text-align: right;
+}
+
+.my-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 20;
+    top: 0;
+    left: 0;
+}
+
+.my-overlay-names-container{
+    margin-top: 5%;
+    margin-left: 25%;
+    padding: 20px;
+    width: 30%;
+    background: #FFD9A2;
+    overflow-y: auto;
+    height: 500px;
+    border-radius: 5%;
+    
+}
+
+.my-overlay-questions-container{
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 25%;
+    width: 30%;
+    background: #FFD9A2;
+    border-radius: 5%;
+
+}
+
+.my-overlay-form{
+    padding: 20px;
+
+}
+
+.my-overlay-box {
+    background: white;
+    margin: 20px;
+}
+
+.my-overlay-name {
+    left: 1%;
+    margin-bottom: 5px;
+}
+
+
+.btn-margin {
+    margin-top: 15px;
+    margin-right: 5px;
+}
+
+.db-entry{
+    padding: 20px;
+    align-content: center!important;
+    text-align: center!important;
+}
+

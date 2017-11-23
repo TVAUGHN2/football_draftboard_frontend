@@ -1,0 +1,31 @@
+
+<div class="ff-main" style="margin-top:5px;" *ngIf="draftersService">
+  <div class="ff-margin ff-fixed">
+    <div class="ff-margin-bottom">
+        <app-feature-blocks></app-feature-blocks>
+    </div>
+    <div>
+        <app-bye-week [profileDrafter] = "draftersService.getProfileDrafter()">
+        </app-bye-week>
+        
+    </div>   
+    
+  </div>
+
+  <div style="margin-left:120px">
+
+    <div class="ff-panel">
+      <div class="ff-row-padding" style="margin:0 -16px">
+        <div class="ff-twothird">
+            {{draftersService.getDashboardName()}}
+            <app-all-draft-table [drafters]= "draftersService.getDrafters()"></app-all-draft-table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+</div>
+
+
+
+

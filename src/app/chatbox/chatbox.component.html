@@ -1,0 +1,81 @@
+<div class="chatbox" *ngIf="authService.getUser()['fname']">
+
+
+<div class="container box">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="panel panel-primary" style="border-color:#009688 ">
+                <div class="panel-heading" style="background-color:#009688" id="accordion">
+                    <span class="glyphicon glyphicon-comment"></span> Chat
+                    <div class="btn-group pull-right">
+                        <a type="button" class="btn btn-default btn-xs" data-toggle="collapse" data-parent="#accordion" (click)="collapse()">
+                            <span class="glyphicon glyphicon-chevron-down"></span>
+                        </a>
+                    
+                    </div>
+                </div>
+            <div class="panel-collapse collapse in" id="collapseOne" *ngIf="!isCollapsed">
+                <div class="panel-body" id="chatBody">
+                    <ul class="chat">
+                        <li class="left clearfix">
+                            <span class="chat-img pull-left">
+                                <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                              </span>
+                              <div class="chat-body clearfix">
+                                  <div class="header">
+                                      <strong class="primary-font">ChatBot</strong> <small class="pull-right text-muted">
+                                          <span class="glyphicon glyphicon-time"></span>...</small>
+                                  </div>
+                                  <p>
+                                      Hi there! Type "-h" if you would like to know the commands you can give me.
+                                  </p>
+                              </div>
+                        </li>
+                    </ul>
+                    <ul class="chat" *ngFor= "let msg of displayMsgs">
+                        <li class="left clearfix" *ngIf="!isUser(msg)">
+                          <span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=U" alt="User Avatar" class="img-circle" />
+                          </span>
+                          <div class="chat-body clearfix">
+                              <div class="header">
+                                  <strong class="primary-font">ChatBot</strong> <small class="pull-right text-muted">
+                                      <span class="glyphicon glyphicon-time"></span>{{msg["time"]}}</small>
+                              </div>
+                              <p>
+                                  {{msg["msg"]}}
+                              </p>
+                          </div>
+                        </li>
+                        <li class="right clearfix" *ngIf="isUser(msg)">
+                            <span class="chat-img pull-right">
+                              <img src="http://placehold.it/50/FA6F57/fff&text=ME" alt="User Avatar" class="img-circle" />
+                            </span>
+                            <div class="chat-body clearfix">
+                                <div class="header">
+                                    <small class=" text-muted"><span class="glyphicon glyphicon-time"></span>{{msg["time"]}}</small>
+                                    <strong class="pull-right primary-font">{{authService.getUser()["fname"]}}</strong>
+                                </div>
+                                <p>
+                                    {{msg["msg"]}}
+                                </p>
+                            </div>
+                          </li>
+                    </ul>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+                        <input id="btn-input" type="text" class="form-control input-sm" name="userMsg" (keyup.enter)="respond(userMsg)" #userMsg placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat" (click)="respond(userMsg)">
+                                Send
+                            </button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

@@ -1,0 +1,48 @@
+/* Colors */
+.ff-teal,.ff-hover-teal:hover{color:#fff!important; font-weight: bold!important; background-color:#009688!important}
+.ff-pale-turqoise, .ff-hover-pale-turqoise:hover{color:#000!important; font-weight: bold!important; background-color:#AFEEEE!important}
+.ff-white,.ff-hover-white:hover{color:#000!important;background-color:#fff!important}
+.ff-blue-gray{color:#fff!important;background-color:#5F9EA0!important}
+.ff-light-grey,.ff-hover-light-grey:hover,.ff-light-gray,.ff-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+
+/* Begin draft table*/
+.ff-table,.ff-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}
+.ff-table-all{border:1px solid #009688}
+.ff-bordered tr,.ff-table-all tr{border-bottom:1px solid #ddd}
+.ff-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.ff-table-all tr:nth-child(odd){background-color:#fff}
+.ff-table-all tr:nth-child(even){background-color:#f1f1f1}
+.ff-hoverable tbody tr:hover,.ff-ul.ff-hoverable li:hover{background-color:#ccc}
+.ff-centered tr th,.ff-centered tr td{text-align:center; align-content: center;}
+.ff-table td,.ff-table th,.ff-table-all td,.ff-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.ff-table th:first-child,.ff-table td:first-child,.ff-table-all th:first-child,.ff-table-all td:first-child{padding-left:16px}
+/* End draft table*/
+
+/* Position count table */
+.ff-position-count{
+    width: 100%;
+    border-spacing:0;
+    border-style: solid;
+    border-width: thin;
+    border-color: #fff; 
+    
+}
+
+.ff-position-right-border{
+    border-style: solid;
+    border-width: thin;
+    border-color: #fff; 
+    text-align: center;
+    align-content: center;
+}
+
+
+.ff-drafter-container{
+    border-style: solid;
+    border-width: medium;
+    border-color: #009688;
+    width: 250px;
+    font-size: 12px;
+    width: 100%;
+}
+

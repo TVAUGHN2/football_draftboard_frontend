@@ -1,0 +1,107 @@
+<div class="ff-feature-container" >
+  <div class="ff-neutral-gray ff-feature-block ff-margin-bottom" (click)="changeOverlay('view')">
+    <div class="ff-right">
+      <i class="fa fa-arrow-circle-right ff-xlarge"></i>
+    </div>
+    <div>View Dashboards</div>
+  </div>
+
+  <div class="ff-orange-cream ff-feature-block ff-margin-bottom" (click)="changeOverlay('questions'); createDashboardForm.reset()">
+    <div class="ff-right">
+      <i class="fa fa-plus-circle ff-xlarge"></i>
+    </div>
+    <div>Create Dashboard</div>
+  </div>
+
+  <!-- ADD IN LATER
+  <div class="ff-purple-cream ff-feature-block ff-margin-bottom" >
+      <div class="ff-right">
+        <i class="fa fa-plus-circle ff-xlarge"></i>
+      </div>
+      <div>Create List</div>
+  </div>
+</div>
+-->
+
+<!-- Overlay for users to view dashboard -->
+<div class="my-overlay" padding [hidden]="viewDashboardOverlayHidden">
+    <div class="my-overlay-questions-container">
+      View Dashboard
+
+      <div *ngFor="let dashboardView of dashboardViews">
+        <span class="db-entry">{{dashboardView.dbName}}:</span>
+        
+        <span class="">
+          <button type="button" class="btn btn-success btn-margin" (click)="onSelect(dashboardView.dbName)" >View</button>
+          <button type="button" class="btn btn-danger btn-margin" (click)="onDelete(dashboardView.dbName)" >Delete</button>
+        </span>
+      </div>
+      <div>
+          <button type="button" class="btn btn-default btn-margin" (click)="onCancel('view');">Done</button>       
+      </div>
+   
+    </div>
+    
+</div>
+
+
+<!-- Overlay for users to answer questions to generate names dashboard -->
+<div class="my-overlay" padding [hidden]="createDashboardOverlayHidden">
+    <div class="my-overlay-questions-container">
+      Create Dashboard
+      <form class="my-overlay-form" (ngSubmit)="onSubmit('questions')" #createDashboardForm="ngForm"> 
+        <div>
+            <label for="dashboardName">Name of Dashboard</label>
+            <input type="text" class="form-control" id="dashboardName"
+                    required
+                    [(ngModel)]="model['dashboardName']" name="dashboardName"
+                    #name="ngModel">
+        </div>
+
+        <div class="form-group">
+            <label for="power">How many people are drafting?</label>
+            <select class="form-control" id="numDrafters"
+                    required
+                    [(ngModel)]="model['numDrafters']" name="numDrafters"
+                    #numDrafters="ngModel" #numDrafters (ngModelChange)="populatePickList($event)">
+              <option *ngFor="let num of totalNumList" [value]="num">{{num}}</option>
+            </select>
+            <div [hidden]="numDrafters.valid || numDrafters.pristine"></div>
+          </div>
+
+          <div class="form-group">
+              <label for="power">What is your draft pick?</label>
+              <select class="form-control" id="profilePick"
+                      required
+                      [(ngModel)]="model['profilePick']" name="profilePick"
+                      #profilePick="ngModel">
+                <option *ngFor="let pick of playerPickList" [value]="pick">{{ pick }}</option>
+              </select>
+              <div [hidden]="profilePick.valid || profilePick.pristine"></div>
+            </div>
+     
+          <button type="submit" class="btn btn-success btn-margin" [disabled]="!createDashboardForm.form.valid">Submit</button>
+          <button type="button" class="btn btn-default btn-margin" (click)="onCancel('questions'); createDashboardForm.reset()">Cancel</button>
+        </form>
+    </div>
+  </div>
+
+  <!--Overlay for user to enter Drafter's names-->
+  <div class="my-overlay" padding [hidden]="namesOverlayHidden">
+      <div class="my-overlay-names-container">
+          <b>Enter Names of Drafters</b>
+          <form class="my-overlay-form" (ngSubmit)="onSubmit('names')" #createNamesForm="ngForm">
+              <div  *ngFor="let pick of playerPickList">
+                  <label for="name">Pick {{ pick }} </label>
+                  <input type="text" class="form-control" id="name{{pick}}"
+                         required
+                         [(ngModel)]="model['names'][pick]" name="name{{pick}}"
+                         #name="ngModel">
+              </div>
+              <button type="submit" class="btn btn-success btn-margin" [disabled]="!createNamesForm.form.valid">Submit</button>
+              <button type="button" class="btn btn-default btn-margin" (click)="onCancel('names'); createNamesForm.reset()">Cancel</button>
+            </form>
+      
+      </div>
+  </div>
+

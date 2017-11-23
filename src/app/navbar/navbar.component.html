@@ -1,0 +1,29 @@
+<body>
+  <div id='cssmenu'>
+  <ul>
+      <li><a [routerLink]= "['/dashboard']">Dashboard</a></li>
+      <li><a [routerLink]="['/playerlist']">Player Lists</a></li>
+      <li><a [routerLink]="['/draftrounds']">Draft Rounds</a></li>
+      <li><a [routerLink]="['/faqs']">FAQs<i class="fa fa-question-circle ff-right"></i></a></li>
+      <li><a>{{signInText}}</a></li>
+      <app-save></app-save>
+      <app-logout-btn></app-logout-btn>
+  </ul>
+  <!-- Header -->
+  <div class="chatbox">
+      <app-chatbox></app-chatbox>
+  </div>
+
+  </div>
+  
+      
+</body>
+  
+  
+<div id= "content">
+    
+  <div>
+    <router-outlet></router-outlet>  
+  </div>
+  
+</div>

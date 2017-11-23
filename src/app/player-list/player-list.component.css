@@ -1,0 +1,43 @@
+/* Colors */
+.ff-teal,.ff-hover-teal:hover{color:#fff!important; font-weight: bold!important; background-color:#009688!important}
+.ff-pale-turqoise, .ff-hover-pale-turqoise:hover{color:#000!important; font-weight: bold!important; background-color:#AFEEEE!important}
+.ff-white,.ff-hover-white:hover{color:#484c4d!important;background-color:#fff!important}
+.ff-blue-gray{color:#fff!important;background-color:#5F9EA0!important}
+.ff-light-grey,.ff-hover-light-grey:hover,.ff-light-gray,.ff-hover-light-gray:hover{color:#000!important;background-color:#f1f1f1!important}
+.ff-blue-soft,.ff-blue-soft-hover:hover{color:#747576!important;background-color:#dff7ff!important}
+
+
+
+.ff-player-table{
+    width:100%;
+    border-collapse: collapse;
+    
+}
+
+.ff-player-row{
+    font-size: 12px;
+    border-style: solid!important;
+    border-width: thin!important;
+    border-color: #FFD9A2!important;
+    align-content: center;
+    text-align: center;
+}
+
+
+.ff-player-header{
+    font-size: 12px;
+    align-content: center;
+    text-align: center;
+}
+
+.ff-container{
+    margin-left: 20px;
+    width: 250px;
+}
+
+.ff-player-container{
+    overflow-y: auto;
+    height: 675px;
+}
+
+

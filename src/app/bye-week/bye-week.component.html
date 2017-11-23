@@ -1,0 +1,12 @@
+<div class="ff-teal ff-drafter-container ff-wrap-text">
+    Bye Week Counter
+
+<table table-layout: fixed class="ff-bye-count" *ngIf="profileDrafter">
+  <!-- vertical -->
+  {{ populateByeWeekCount() }}
+  <tr *ngFor="let byeWeek of byeWeeks" >
+    <th class="ff-pale-turqoise ff-bye-border"> {{ byeWeek.week }}</th>
+    <th class="ff-light-gray ff-bye-border">{{ byeWeek.count }}</th>
+  </tr>
+</table>
+</div>

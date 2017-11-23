@@ -1,0 +1,97 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<!--Overlay for login-->
+ <div class="my-overlay" padding [hidden]="loginOverlayHidden">
+    <!-- Login Form -->
+    <div class="my-overlay-container">
+        <!-- LOGIN FORM -->
+        <div *ngIf="!isCreatingProfile">
+          <h1>Login</h1>
+          <div class="alert alert-danger" role="alert" *ngIf="message">
+            {{ message }}
+          </div>
+
+          <form class="my-overlay-form" #loginForm="ngForm" *ngIf="!authService.getUser()['username']">
+              <div>
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control" id="username"
+                        required
+                        [(ngModel)]="model.username" name="username"
+                        #name="ngModel">
+              </div>
+
+              <div >
+                  <label for="password">Password</label>
+                  <input type="password" class="form-control" id="password"
+                        required
+                        [(ngModel)]="model.password" name="password"
+                        #name="ngModel">
+              </div>
+
+              <button type="button" class="btn btn-success btn-margin" (click)="login();" [disabled]="!loginForm.form.valid">Login</button>
+              <button type="button" class="btn btn-default btn-margin" [routerLink]= "['/dashboard']" (click)="onCancel('login'); loginForm.reset()">
+                Cancel
+              </button>
+          
+          </form>
+      
+          <div *ngIf="!authService.getUser()['username']">
+              <a (click)="createProfile()">Create Profile</a>
+          </div>
+
+          <div *ngIf="authService.getUser()['username']">
+              Logged in as <b>{{ authService.getUser()["fname"] }} {{ authService.getUser()["lname"] }}</b>
+
+              <div>
+                    <button type="button" class="btn btn-success btn-margin" [routerLink]= "['/dashboard']" 
+                        (click)="exit();">
+                        Done
+                     </button>
+
+                     <button type="button" class="btn btn-default btn-margin" [routerLink]= "['/dashboard']" (click)="logout()">
+                        Log out
+                      </button>
+              </div>
+              
+          </div>
+        </div>
+
+         <!-- CREATE PROFILE FORM -->
+        <div *ngIf="isCreatingProfile">
+            <h1>Create Profile (Coming Soon!)</h1>
+        
+          <form class="my-overlay-form" (ngSubmit)="create()" #createProfileForm="ngForm">
+            <div>
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username"
+                      required
+                      [(ngModel)]="model.username" name="username"
+                      #name="ngModel">
+            </div>
+        
+            <div >
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password"
+                      required
+                      [(ngModel)]="model.password" name="password"
+                      #name="ngModel">
+            </div>
+        
+            <div >
+                <label for="repeatpassword">Retype Password</label>
+                <input type="password" class="form-control" id="repeatpassword"
+                      required
+                      [(ngModel)]="model.repeatpassword" name="repeatpassword"
+                      #name="ngModel">
+            </div>
+        
+            <button type="submit" class="btn btn-success btn-margin" [disabled]="!createProfileForm.form.valid">Submit</button>
+            <button type="button" class="btn btn-default btn-margin" (click)="onCancel('cancel'); createProfileForm.reset()">Cancel</button>
+          </form>
+        
+        </div>
+
+    </div>
+
+</div>
+
+
